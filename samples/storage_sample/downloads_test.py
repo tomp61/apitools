@@ -18,6 +18,7 @@
 These tests exercise most of the corner cases for upload/download of
 files in apitools, via GCS. There are no performance tests here yet.
 """
+from __future__ import print_function, absolute_import
 
 import json
 import os
@@ -171,7 +172,7 @@ class DownloadsTest(unittest.TestCase):
     def testSerializedDownload(self):
 
         def _ProgressCallback(unused_response, download_object):
-            print 'Progress %s' % download_object.progress
+            print('Progress %s' % download_object.progress)
 
         file_contents = self.__GetTestdataFileContents('fifteen_byte_file')
         object_name = os.path.join(self._TESTDATA_PREFIX, 'fifteen_byte_file')
