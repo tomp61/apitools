@@ -15,6 +15,7 @@
 # limitations under the License.
 
 """Base class for api services."""
+from __future__ import absolute_import
 
 import base64
 import contextlib
